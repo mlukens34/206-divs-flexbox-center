@@ -99,23 +99,64 @@ textarea {
 html {
   background-color: #001a00;
   height: 100%;
+  width: 100%;
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  padding: 2em;
+  padding: 0 2em;
   font-size: 1.25em;
   height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
 }
 
-.wrapper {
+header,
+footer{
+    height: 80px;
+    width: 100%;
+} 
+
+main{
+    height: 250px;
+    width: 100%;
+}
+
+
+header, 
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+header h1{
+    font-size: 3em;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #fff;
+}
+
+main p{
+    font-size: 1.35em;
+}
+
+.flex-container {
   /*add display:flex and set justify-content to space-between*/
   font-weight: 700;
   display: flex;
+  justify-content: center;
   justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
-.div-1, .div-2, .div-3 {
+.flex-items {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
   color: #fff;
   line-height: 1.5em;
@@ -126,12 +167,17 @@ body {
   width: 30%;
   justify-content: center;
   align-items: center;
-  border-right: #fff solid 0.07em;
+  border-right: 1px solid #fff;
   padding-right: 0.75em;
 }
 
+footer{
+    border-top: 1px solid #fff;
+}
 
-
+footer i{
+    padding: 30px 20px 0 0;
+}
 
 /* ==========================================================================
    Helper classes
